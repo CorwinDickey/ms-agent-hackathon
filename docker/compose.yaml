@@ -1,0 +1,18 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+  sandbox:
+    build:
+      dockerfile: sandbox.dockerfile
+    container_name: sandbox
+    ports:
+      - "5000:5000"
+    command: ["sleep", "infinity"]
+  volumes:
+    ollama:
