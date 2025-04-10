@@ -2,7 +2,7 @@ import subprocess
 from typing import Tuple, Dict, Any
 
 from sdk.core_classes.tool_interface import ToolInterface
-from main import DEFAULT_CONTAINER_NAME
+from sdk.utils.global_variables import DEFAULT_CONTAINER_NAME
 
 class PythonTestTool(ToolInterface):
   # A tool that tests python code securely in a container.

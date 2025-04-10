@@ -7,7 +7,7 @@ from sdk.core_classes.base_agent import BaseAgent
 from sdk.core_classes.tool_manager import ToolManager
 from sdk.services.ollama_client_factory import OllamaClientFactory
 from tools.python_test_tool import PythonTestTool
-from main import DEFAULT_MODEL_NAME
+from sdk.utils.global_variables import DEFAULT_MODEL_NAME
 
 default_logger = get_logger("PythonCodeExecAgent", level=logging.INFO)
 

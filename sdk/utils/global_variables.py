@@ -1,0 +1,2 @@
+DEFAULT_CONTAINER_NAME = "sandbox"
+DEFAULT_MODEL_NAME = "qwen2.5-coder"

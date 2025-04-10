@@ -8,7 +8,7 @@ RUN useradd -m sandboxuser
 USER sandboxuser
 WORKDIR /home/sandboxuser
 
-COPY py_requirements.txt .
-RUN pip install --no-cache-dir -r py_requirements.txt
+COPY sandbox_requirements.txt .
+RUN pip install --no-cache-dir -r sandbox_requirements.txt
 
 CMD [ "python", "--version" ]

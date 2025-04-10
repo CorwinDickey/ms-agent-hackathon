@@ -6,7 +6,7 @@ default_sandbox_name = "sandbox"
 
 # runs the compose.yaml file to standup the docker environment
 def compose_up(logger: logging.Logger) -> None:
-  cmd = ["docker", "compose", "-f", "docker/compose.yaml", "up", "-d", "--no-recreate"]
+  cmd = ["docker", "compose", "-p", "ms-agent-hackathon", "up", "-d", "--no-recreate"]
   result = subprocess.run(cmd, capture_output=True, text=True)
   if result.returncode != 0 or result.stdout.strip() != "":
     msg = f"The docker composition failed to stand up.\n\n{result.stdout}"
