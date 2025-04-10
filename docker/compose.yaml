@@ -11,8 +11,6 @@ services:
     build:
       dockerfile: sandbox.dockerfile
     container_name: sandbox
-    ports:
-      - "5000:5000"
     command: ["sleep", "infinity"]
   volumes:
     ollama:
