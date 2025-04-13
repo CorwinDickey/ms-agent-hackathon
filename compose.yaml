@@ -2,9 +2,11 @@ services:
   ollama:
     image: ollama/ollama:latest
     ports:
-      - "11434:11434"
+      - 11434:11434
     volumes:
       - ollama:/root/.ollama
+    pull_policy: always
+    tty: true
     restart: unless-stopped
   sandbox:
     build:
